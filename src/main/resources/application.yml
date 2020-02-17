@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: softwares
+      username: dbuser
+      password: dbpassword
+      database: softwares
+      port: 27017
+      host: localhost
+
+logging:
+  level:
+    org:
+      springframework:
+        data: debug
