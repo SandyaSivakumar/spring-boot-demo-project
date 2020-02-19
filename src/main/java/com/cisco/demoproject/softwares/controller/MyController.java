@@ -24,4 +24,10 @@ public class MyController {
     public List<Softwares> getSoftwareName(@PathVariable("softwareName") String softwareName){
         return softwareService.findByName(softwareName);
     }
+
+    @GetMapping(value = "/software",produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ResponseBody
+    public List<Softwares> getSoftware(){
+        return softwareService.find();
+    }
 }

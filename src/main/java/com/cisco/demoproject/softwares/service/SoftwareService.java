@@ -27,4 +27,7 @@ public class SoftwareService {
 //        query.addCriteria(Criteria.where("softwareName").is(softwareName));
 //        return mongoTemplate.find(query, Software.class);
     }
+    public List<Softwares> find(){
+        return swRepo.findAll();
+    }
 }
