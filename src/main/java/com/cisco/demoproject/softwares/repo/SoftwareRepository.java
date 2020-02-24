@@ -9,4 +9,6 @@ import java.util.List;
 public interface SoftwareRepository extends MongoRepository<Softwares,String> {
     List<Softwares> findBySoftwareName(String softwareName);
     List<Softwares> findAll();
+    Softwares findBySoftwareId(String softwareId);
+
 }

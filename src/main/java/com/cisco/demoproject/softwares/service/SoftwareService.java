@@ -28,6 +28,17 @@ public class SoftwareService {
 //        return mongoTemplate.find(query, Software.class);
     }
     public List<Softwares> find(){
+        System.out.println(swRepo.findAll());
         return swRepo.findAll();
+    }
+
+    public Softwares findObject(String softwareId){
+        return swRepo.findBySoftwareId(softwareId);
+    }
+
+    public Softwares updateViews(String softwareId,Softwares software){
+        Softwares sw = findObject(softwareId);
+        sw.setViews((int) (software.getViews()+1));
+        return swRepo.save(sw);
     }
 }

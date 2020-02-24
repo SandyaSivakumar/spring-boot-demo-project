@@ -8,6 +8,25 @@ public class Softwares {
     private String languageUsed;
     private String createdDate;
     private String owner;
+    private String description;
+    private int views;
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getViews() {
+        return views;
+    }
+
+    public void setViews(int views) {
+        this.views = views;
+    }
 
     public String getSoftwareId() {
         return softwareId;
