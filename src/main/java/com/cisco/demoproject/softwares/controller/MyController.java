@@ -18,6 +18,7 @@ import com.cisco.demoproject.softwares.pojo.Softwares;
 import javax.validation.Valid;
 
 @RestController
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 @CrossOrigin(origins = "http://localhost:4200")
 public class MyController {
     @Autowired
@@ -42,7 +43,7 @@ public class MyController {
     }
 
     @PostMapping(value = "/software/{softwareId}")
-    public Softwares modifySoftwareById(@PathVariable("softwareId") String softwareId, @Valid @RequestBody Softwares softwares){
-        return softwareService.updateViews(softwareId,softwares);
+    public Softwares modifySoftwareById(@PathVariable("softwareId") String softwareId){
+        return softwareService.updateViews(softwareId);
     }
 }

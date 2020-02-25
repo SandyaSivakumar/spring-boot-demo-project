@@ -2,25 +2,50 @@
 package com.cisco.demoproject.softwares.pojo;
 
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+
 public class Softwares {
+    @Id
+    private ObjectId _id;
     private String softwareId;
     private String softwareName;
     private String languageUsed;
     private String createdDate;
     private String owner;
-    private String description;
+    private String application;
+
+    public String getApplication() {
+        return application;
+    }
+
+    public void setApplication(String application) {
+        this.application = application;
+    }
+
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+    public String getServiceOwner() {
+        return serviceOwner;
+    }
+
+    public void setServiceOwner(String serviceOwner) {
+        this.serviceOwner = serviceOwner;
+    }
+
+    private String service;
+    private String serviceOwner;
     private int views;
 
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public double getViews() {
+    public int getViews() {
         return views;
     }
 

@@ -36,9 +36,10 @@ public class SoftwareService {
         return swRepo.findBySoftwareId(softwareId);
     }
 
-    public Softwares updateViews(String softwareId,Softwares software){
+    public Softwares updateViews(String softwareId){
         Softwares sw = findObject(softwareId);
-        sw.setViews((int) (software.getViews()+1));
+        System.out.println(sw);
+        sw.setViews((int) (sw.getViews()+1));
         return swRepo.save(sw);
     }
 }
