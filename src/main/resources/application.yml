@@ -1,12 +1,13 @@
 spring:
   data:
     mongodb:
-      authentication-database: softwares
-      username: dbuser
-      password: dbpassword
+#      authentication-database: softwares
+#      username: dbuser
+#      password: dbpassword
       database: softwares
       port: 27017
-      host: localhost
+#      host: localhost
+      uri: mongodb+srv://dbuser:dbpassword@softwarecluster-j20is.mongodb.net/softwares?retryWrites=true&w=majority&ssl=true&readPreference=secondary
 
 logging:
   level:

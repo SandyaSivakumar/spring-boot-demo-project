@@ -4,7 +4,9 @@ package com.cisco.demoproject.softwares.pojo;
 
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "softwares")
 public class Softwares {
     @Id
     private ObjectId _id;
@@ -14,6 +16,16 @@ public class Softwares {
     private String createdDate;
     private String owner;
     private String application;
+
+    public int getLinesOfCode() {
+        return linesOfCode;
+    }
+
+    public void setLinesOfCode(int linesOfCode) {
+        this.linesOfCode = linesOfCode;
+    }
+
+    private int linesOfCode;
 
     public String getApplication() {
         return application;
