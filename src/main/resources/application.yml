@@ -1,13 +1,13 @@
 spring:
   data:
     mongodb:
-#      authentication-database: softwares
-#      username: dbuser
-#      password: dbpassword
-      database: softwares
-      port: 27017
-#      host: localhost
-      uri: mongodb+srv://dbuser:dbpassword@softwarecluster-j20is.mongodb.net/softwares?retryWrites=true&w=majority&ssl=true&readPreference=secondary
+      authentication-database: cd_pipeline_data
+      username: coderw
+      password: H5ye}X}5
+      database: cd_pipeline_data
+      port: 18001
+      host: mongo-dev-rtp-pipeline-data
+
 
 logging:
   level:

@@ -57,7 +57,7 @@ public class MyControllerTest {
         softwares.setSoftwareId("softwareId");
         softwares.setSoftwareName("softwareName");
         //test1
-        String data = "{\"softwareId\":\"CD001\",\"softwareName\":\"cdapi-cd-code-security-data-api\",\"languageUsed\":\"Java\",\"createdDate\":\"03/02/2020\",\"owner\":\"Yashika\",\"application\":\"CD Data Plane\",\"linesOfCode\":3200,\"service\":\"Continuous Delivery Systems\",\"serviceOwner\":\"Jyoti Sarin\",\"views\":63}";
+        String data = "{\"softwareId\":\"CD001\",\"softwareName\":\"cdapi-cd-code-security-data-api\",\"languageUsed\":\"Java\",\"createdDate\":\"03/02/2020\",\"owner\":\"Yashika\",\"application\":\"CD Data Plane\",\"linesOfCode\":3200,\"service\":\"Continuous Delivery Systems\",\"serviceOwner\":\"Jyoti Sarin\",\"views\":81}";
         String uri = "/softwares/CD001";
         Mockito.when(softwareService.findObject("test")).thenReturn(softwares);
         MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
@@ -87,7 +87,7 @@ public class MyControllerTest {
         softwares.add(software1);
         //System.out.println(softwares);
 
-        String data = "[{\"softwareId\":\"CD001\",\"softwareName\":\"cdapi-cd-code-security-data-api\",\"languageUsed\":\"Java\",\"createdDate\":\"03/02/2020\",\"owner\":\"Yashika\",\"application\":\"CD Data Plane\",\"linesOfCode\":3200,\"service\":\"Continuous Delivery Systems\",\"serviceOwner\":\"Jyoti Sarin\",\"views\":63}]";
+        String data = "[{\"softwareId\":\"CD001\",\"softwareName\":\"cdapi-cd-code-security-data-api\",\"languageUsed\":\"Java\",\"createdDate\":\"03/02/2020\",\"owner\":\"Yashika\",\"application\":\"CD Data Plane\",\"linesOfCode\":3200,\"service\":\"Continuous Delivery Systems\",\"serviceOwner\":\"Jyoti Sarin\",\"views\":81}]";
         String uri = "/software/cdapi-cd-code-security-data-api";
         Mockito.when(softwareService.findByName("cdapi-cd-code-security-data-api")).thenReturn((List<Softwares>)softwares);
          MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri)
@@ -95,6 +95,12 @@ public class MyControllerTest {
         int status = mvcResult.getResponse().getStatus();
         assertEquals(200, status);
         assertEquals(mvcResult.getResponse().getContentAsString(),data);
+    }
+
+    @Test
+    public void test3() throws Exception{
+        //test3
+
     }
 }
 
